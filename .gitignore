@@ -1,1 +1,5 @@
 conda/
+work/
+output/
+.nextflow
+.nextflow*

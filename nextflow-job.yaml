@@ -1,0 +1,6 @@
+pipeline:
+  class: File
+  path: main.nf
+samplesheet:
+  class: File
+  path: samplesheet.csv

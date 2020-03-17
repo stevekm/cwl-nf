@@ -41,7 +41,10 @@ bash:
 	bash
 
 run:
-	cwl-runner
+	cwl-runner nextflow.cwl nextflow-job.yaml
+
+nextflow-run:
+	nextflow run main.nf --samplesheet samplesheet.csv
 
 clean:
 	rm -rf output

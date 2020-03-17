@@ -10,13 +10,19 @@ samples = Channel.fromPath( file("${params.samplesheet}") )
 
 process use_sample {
     echo true
+    publishDir "output"
 
     input:
     val(sampleID) from samples
 
+    output:
+    file("${output_file}")
+
     script:
+    output_file = "${sampleID}.txt"
     """
     echo "${sampleID}"
+    touch "${output_file}"
     """
 }
 
