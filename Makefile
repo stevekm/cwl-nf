@@ -46,6 +46,9 @@ run:
 nextflow-run:
 	nextflow run main.nf --samplesheet samplesheet.csv
 
+cwl-run:
+	# cwl-runner makefile.cwl
+
 clean:
 	rm -rf output
 	rm -f .nextflow.log*
