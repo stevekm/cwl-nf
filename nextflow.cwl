@@ -13,8 +13,10 @@ inputs:
     inputBinding:
       position: 1
       prefix: --samplesheet
+  nextflow_config:
+    type: File
 outputs:
   output_dir:
-    type: File
+    type: Directory
     outputBinding:
       glob: output

@@ -4,3 +4,6 @@ pipeline:
 samplesheet:
   class: File
   path: samplesheet.csv
+nextflow_config:
+  class: File
+  path: nextflow.config

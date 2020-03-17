@@ -41,7 +41,12 @@ bash:
 	bash
 
 run:
-	cwl-runner nextflow.cwl nextflow-job.yaml
+	cwl-runner \
+	--preserve-environment PATH \
+	--preserve-environment JAVA_HOME \
+	--preserve-environment NXF_ANSI_LOG \
+	--preserve-environment JAVA_LD_LIBRARY_PATH \
+	nextflow.cwl nextflow-job.yaml
 
 nextflow-run:
 	nextflow run main.nf --samplesheet samplesheet.csv
